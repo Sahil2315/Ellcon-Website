@@ -1,0 +1,69 @@
+#root {
+  margin: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.headline{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  /* background: linear-gradient(165deg, rgba(247,255,182,0.4) 0%,  rgba(255,255,255,1) 33%, rgba(255,255,255,1) 67%, rgba(255, 217, 212, 0.39) 100%); */ 
+}
+.headbg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  background: linear-gradient(165deg, rgba(247,255,182,0.5) 0%,  rgba(255,255,255,0.3) 33%, rgba(255,255,255,0.4) 67%, rgba(255, 217, 212, 0.5) 100%); 
+}
+.logoimg{
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  height: 75px;
+}
+
+.maindiv{
+  z-index: 1;
+}
+
+.LPBD{
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  opacity: 30%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
