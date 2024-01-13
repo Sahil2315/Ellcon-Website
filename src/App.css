@@ -104,3 +104,11 @@
     display: none;
   }
 }
+
+.MainDisplay{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 30px;
+  font-weight: 600;
+}
