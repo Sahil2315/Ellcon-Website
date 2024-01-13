@@ -3,18 +3,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 .headline{
   position: absolute;
@@ -22,6 +10,7 @@
   left: 0;
   width: 100%;
   height: 100px;
+  backdrop-filter: blur(5px);
   /* background: linear-gradient(165deg, rgba(247,255,182,0.4) 0%,  rgba(255,255,255,1) 33%, rgba(255,255,255,1) 67%, rgba(255, 217, 212, 0.39) 100%); */ 
 }
 .headbg{
@@ -31,7 +20,7 @@
   width: 100%;
   height: 100%;
   opacity: 30%;
-  background: linear-gradient(165deg, rgba(247,255,182,0.5) 0%,  rgba(255,255,255,0.3) 33%, rgba(255,255,255,0.4) 67%, rgba(255, 217, 212, 0.5) 100%); 
+  background: linear-gradient(165deg, rgba(247,255,182,0.2) 0%,  rgba(255,255,255,0.15) 33%, rgba(255,255,255,0.15) 67%, rgba(255, 217, 212, 0.2) 100%); 
 }
 .logoimg{
   position: absolute;
@@ -53,17 +42,65 @@
   opacity: 30%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+  animation: fade1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#marker{
+  z-index: 6;
+  position: absolute;
+  top: 45vh;
+  left: 48vw;
+  height: 75px;
+  animation: load1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#logotext{
+  position: absolute;
+  height: 68px;
+  top: 19px;
+  left: calc(10vw + 48px);
+}
+
+@keyframes load1{
+  0%{
+    transform: rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  20%{
+    transform: rotateY(360deg);
+  }
+  30%{
+    transform: rotateY(0deg);
+  }
+  40%{
+    transform: rotateY(360deg);
+  }
+  100%{
+    transform: translate(calc(10vw - 47vw), calc(15px - 45vh));
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes fade1{
+  80%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+    display: none;
   }
 }
