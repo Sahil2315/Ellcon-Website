@@ -10,14 +10,10 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
-  color: yellow;
-}
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: rgb(228, 220, 220);
@@ -60,19 +56,4 @@ button:focus-visible {
   }
 }
 
-.navbar{
-  position: absolute;
-  right: 180px;
-  font-size: 22px;
-  padding: 46px 50px;
-}
 
-.navElements{
-  padding-left: 40px;
-  color: black;
-  font-weight: 500;
-  text-shadow: 2px 2px 3px rgba(128, 128, 128, 0.3);
-}
-.active{
-  color: rgb(68, 133, 187);
-}

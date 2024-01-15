@@ -13,12 +13,6 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-  function removeCover() {
-    const Cover = document.getElementById('cover')
-    setTimeout('', 2000);
-    Cover.style.display = 'none'
-  }
   return (
     <>
     <img className='LPBD' src={LPBD}/>

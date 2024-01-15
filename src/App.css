@@ -1,6 +1,5 @@
 #root {
   margin: 0;
-  text-align: center;
 }
 
 
@@ -11,8 +10,75 @@
   width: 100%;
   height: 100px;
   backdrop-filter: blur(5px);
-  /* background: linear-gradient(165deg, rgba(247,255,182,0.4) 0%,  rgba(255,255,255,1) 33%, rgba(255,255,255,1) 67%, rgba(255, 217, 212, 0.39) 100%); */ 
 }
+
+
+.navbar{
+  position: absolute;
+  right: 7%;
+  font-size: 22px;
+  padding: 46px 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a:hover{
+  color: rgb(68, 133, 187);
+}
+
+.navElements{
+  padding-left: 40px;
+  color: black;
+  font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(128, 128, 128, 0.2);
+}
+.active{
+  color: rgb(68, 133, 187);
+}
+#navbtn{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: 45px;
+  height: 45px;
+  top: 10px;
+  right: 6px;
+  backdrop-filter: blur(100px);
+  z-index: 6;
+  opacity: 0.8;
+}
+#nbline1{
+  position: relative;
+  height: 5px;
+  width: 35px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background-color: grey;
+  z-index: 6;
+  transform-origin: 0% 50%;
+}
+#nbline2{
+  position: relative;
+  height: 5px;
+  margin-top: 10px;
+  width: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+  background-color: grey;
+  z-index: 6;
+}
+#nbline3{
+  position: relative;
+  height: 5px;
+  width: 35px;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background-color: grey;
+  z-index: 6;
+  transform-origin: 0% 50%;
+}
+
 .headbg{
   position: absolute;
   top: 0;
@@ -25,7 +91,7 @@
 .logoimg{
   position: absolute;
   top: 15px;
-  left: 10%;
+  left: 8%;
   height: 75px;
 }
 
@@ -74,7 +140,7 @@
   position: absolute;
   height: 68px;
   top: 19px;
-  left: calc(10vw + 48px);
+  left: calc(8vw + 48px);
 }
 
 @keyframes load1{
@@ -91,7 +157,7 @@
     transform: rotateY(360deg);
   }
   100%{
-    transform: translate(calc(10vw - 47vw), calc(15px - 45vh));
+    transform: translate(-35vw, calc(15px - 45vh));
   }
 }
 
@@ -111,4 +177,44 @@
   left: 20%;
   font-size: 30px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .headline{
+    height: 70px;
+  }
+  .navbar{
+    right: 5%;
+    font-size: 18px;
+    padding: 30px 20px;   
+  }
+  .logoimg{
+    height: 55px;
+    top: 10px;
+  }
+  #marker{
+    height: 55px;
+  }
+  #logotext{
+    top: 12px;
+    height: 51px;    
+    left: calc(8vw + 33px);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .navbar{
+    display: none;
+    flex-direction: column;
+    right: 6px;
+    top: 50px;
+    z-index: 10;
+    padding: 5px;
+  }
+  .navElements{
+    padding: 5px;
+  }
+  #navbtn{
+    display: flex;
+  }
 }
