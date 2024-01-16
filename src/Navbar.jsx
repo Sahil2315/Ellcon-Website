@@ -26,14 +26,18 @@ function Navbar(){
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
         }        
     }
+    let navElementPress = () => {
+        toggle = true
+        btnpress()
+    }
     return(
         <div>
             <div id="navbar">
-                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
-                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
-                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
-                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
-                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
+                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
+                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
+                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
+                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
+                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
             </div>
             <div onClick={btnpress} id="navbtn">
                 <div id="nbline1"></div>
