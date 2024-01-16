@@ -4,22 +4,24 @@
 
 
 .headline{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100px;
-  backdrop-filter: blur(5px);
 }
 
 
 .navbar{
-  position: absolute;
+  position: relative;
+  float: right;
   right: 7%;
   font-size: 22px;
   padding: 46px 30px;
   display: flex;
   flex-direction: row;
+  z-index: 10;
+  transition: height 1s;
 }
 
 .navbar a:hover{
@@ -43,7 +45,6 @@
   height: 45px;
   top: 10px;
   right: 6px;
-  backdrop-filter: blur(100px);
   z-index: 6;
   opacity: 0.8;
 }
@@ -56,6 +57,7 @@
   background-color: grey;
   z-index: 6;
   transform-origin: 0% 50%;
+  transition-duration: 500ms;
 }
 #nbline2{
   position: relative;
@@ -66,6 +68,7 @@
   border-radius: 3px;
   background-color: grey;
   z-index: 6;
+  transition-duration: 500ms;
 }
 #nbline3{
   position: relative;
@@ -77,6 +80,7 @@
   background-color: grey;
   z-index: 6;
   transform-origin: 0% 50%;
+  transition-duration: 500ms;
 }
 
 .headbg{
@@ -101,10 +105,10 @@
 
 .LPBD{
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 100px);
   z-index: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   opacity: 30%;
 }
 
@@ -172,11 +176,14 @@
 }
 
 .MainDisplay{
-  position: absolute;
-  top: 30%;
-  left: 20%;
+  margin-top: 30%;
+  margin-left: 20%;
   font-size: 30px;
   font-weight: 600;
+  z-index: 4;
+}
+.navHeightVert{
+  height: 330px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -187,6 +194,9 @@
     right: 5%;
     font-size: 18px;
     padding: 30px 20px;   
+  }
+  .navElements{
+    padding-left: 25px;
   }
   .logoimg{
     height: 55px;
@@ -206,13 +216,16 @@
   .navbar{
     display: none;
     flex-direction: column;
-    right: 6px;
-    top: 50px;
-    z-index: 10;
-    padding: 5px;
+    right: 0%;
+    top: 70px;
+    width: 100%;
+    background-color: rgba(210, 105, 30, 0.11);
+    backdrop-filter: blur(10px);
   }
   .navElements{
-    padding: 5px;
+    padding: 20px 5px;
+    width: calc(100% - 20px);
+    text-align: center;
   }
   #navbtn{
     display: flex;

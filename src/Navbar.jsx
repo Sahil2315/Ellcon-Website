@@ -15,13 +15,16 @@ function Navbar(){
             line2.style.opacity = "100%"
             toggle = false
             navbar.style.display = "none"
+            navbar.classList.remove('navHeightVert')
             line1.style.transform = "rotate(0deg) scaleX(1)"
             line3.style.transform = "rotate(0deg) scaleX(1)"
+
         }
         else{
             line2.style.opacity = "0%"
             toggle = true
             navbar.style.display = "flex"
+            navbar.classList.add('navHeightVert')
             line1.style.transform = "rotate(45deg) scaleX(1.21)"
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
         }        
