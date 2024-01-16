@@ -175,8 +175,8 @@
 }
 
 .MainDisplay{
-  margin-top: 30%;
-  margin-left: 20%;
+  margin-top: 30vh;
+  margin-left: 20vw;
   font-size: 30px;
   font-weight: 600;
   z-index: 4;
