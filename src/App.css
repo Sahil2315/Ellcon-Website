@@ -12,7 +12,7 @@
 }
 
 
-.navbar{
+#navbar{
   position: relative;
   float: right;
   right: 7%;
@@ -21,10 +21,10 @@
   display: flex;
   flex-direction: row;
   z-index: 10;
-  transition: height 1s;
+    transition: all 1s ease-in-out;
 }
 
-.navbar a:hover{
+#navbar a:hover{
   color: rgb(68, 133, 187);
 }
 
@@ -190,7 +190,7 @@
   .headline{
     height: 70px;
   }
-  .navbar{
+  #navbar{
     right: 5%;
     font-size: 18px;
     padding: 30px 20px;   
@@ -213,18 +213,20 @@
 }
 
 @media screen and (max-width: 830px) {
-  .navbar{
-    display: none;
+  #navbar{
     flex-direction: column;
+    padding: 0;
     right: 0%;
     top: 70px;
     width: 100%;
     background-color: rgba(210, 105, 30, 0.11);
     backdrop-filter: blur(10px);
+    height: 0px;
+    overflow: hidden;
   }
   .navElements{
     padding: 20px 5px;
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     text-align: center;
   }
   #navbtn{
