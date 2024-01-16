@@ -89,8 +89,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 30%;
-  background: linear-gradient(165deg, rgba(247,255,182,0.2) 0%,  rgba(255,255,255,0.15) 33%, rgba(255,255,255,0.15) 67%, rgba(255, 217, 212, 0.2) 100%); 
+  backdrop-filter: blur(10px);
 }
 .logoimg{
   position: absolute;
