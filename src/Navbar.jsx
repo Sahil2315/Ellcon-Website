@@ -27,8 +27,10 @@ function Navbar(){
         }        
     }
     let navElementPress = () => {
-        toggle = true
-        btnpress()
+        if(window.innerWidth <= 830){
+            toggle = true
+            btnpress()
+        }
     }
     return(
         <div>
