@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import "./index.css"
-let toggle = false
+let clickToggle = false
 function Navbar(){
     let normalLinkStyling = "navElements"
     let activeLinkStyling = "navElements active"
@@ -11,16 +11,16 @@ function Navbar(){
         let line2 = document.getElementById("nbline2")
         let line3 = document.getElementById("nbline3")
         let navE = document.querySelectorAll('.navElements')
-        if(toggle){
+        if(clickToggle){
             line2.style.opacity = "100%"
-            toggle = false
+            clickToggle = false
             navbar.style.height = "0px"
             line1.style.transform = "rotate(0deg) scaleX(1)"
             line3.style.transform = "rotate(0deg) scaleX(1)"
         }
         else{
             line2.style.opacity = "0%"
-            toggle = true
+            clickToggle = true
             navbar.style.height = "330px"
             line1.style.transform = "rotate(45deg) scaleX(1.21)"
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
@@ -28,20 +28,20 @@ function Navbar(){
     }
     let navElementPress = () => {
         if(window.innerWidth <= 830){
-            toggle = true
+            clickToggle = true
             btnpress()
         }
     }
     return(
         <div>
             <div id="navbar">
-                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
-                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
-                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
-                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
-                <NavLink onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
+                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
+                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
+                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
+                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
+                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
             </div>
-            <div onClick={btnpress} id="navbtn">
+            <div onTouchStart={btnpress} onClick={btnpress} id="navbtn">
                 <div id="nbline1"></div>
                 <div id="nbline2"></div>
                 <div id="nbline3"></div>
