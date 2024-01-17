@@ -16,10 +16,10 @@ function App() {
   return (
     <>
     <img className='LPBD' src={LPBD}/>
-      <div id="cover">
+      {/* <div id="cover">
         <img id='marker' src={marker}/>
         <img id='logotext' src={logotext}/>
-      </div>
+      </div> */}
       <div className='maindiv'>
         <div className="headline">
           <div className="headbg"></div>
