@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom"
 import "./index.css"
 let clickToggle = false
+function isTouch(){
+    const userAgent = navigator.userAgent;
+    return userAgent.indexOf('touch') !== -1;
+}
 function Navbar(){
     let normalLinkStyling = "navElements"
     let activeLinkStyling = "navElements active"
@@ -35,13 +39,13 @@ function Navbar(){
     return(
         <div>
             <div id="navbar">
-                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
-                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
-                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
-                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
-                <NavLink onTouchStart={navElementPress} onClick={navElementPress} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
+                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
+                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
+                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
+                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink>
+                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
             </div>
-            <div onTouchStart={btnpress} onClick={btnpress} id="navbtn">
+            <div onTouchStart={ isTouch ? btnpress : null } onClick={ isTouch ? null : btnpress } id="navbtn">
                 <div id="nbline1"></div>
                 <div id="nbline2"></div>
                 <div id="nbline3"></div>
