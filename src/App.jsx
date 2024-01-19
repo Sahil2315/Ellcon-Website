@@ -15,7 +15,6 @@ const tabs = ['Home', 'Services']
 
 function App() {
   const [visible, setVisible] = useState(true);
-
   return (
     <>
     <img className='LPBD' src={LPBD}/>

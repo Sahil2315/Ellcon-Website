@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom"
 import "./index.css"
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 let clickToggle = false
 function isTouch(){
@@ -9,10 +9,23 @@ function isTouch(){
 }
 function Navbar(){
   const location = useLocation()
+  let navbarRef = useRef()
 
-  useEffect(() => {
-    navElementPress()
-  }, [location])
+    useEffect(() => {
+        document.addEventListener('click touchstart', (event) => {
+            if(event.target !== navbarRef.current){
+                shutNav()
+            }
+        })
+        return () => document.removeEventListener('click touchstart', (event) => {
+                if(event.target !== navbarRef.current){
+                    shutNav()
+                }
+            })
+    }, [])
+    useEffect(() => {
+        shutNav()
+    }, [location])
 
     let normalLinkStyling = "navElements"
     let activeLinkStyling = "navElements active"
@@ -38,7 +51,7 @@ function Navbar(){
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
         }        
     }
-    let navElementPress = () => {
+    let shutNav = () => {
         if(window.innerWidth <= 830){
             clickToggle = true
             btnpress()
@@ -47,9 +60,7 @@ function Navbar(){
 
     return(
         <div>
-            <div id="navbar">
-                {/* <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
-                <NavLink onTouchStart= {isTouch() ? {navElementPress} : null} onClick= {isTouch() ? null : {navElementPress}} className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink> */}
+            <div ref = {navbarRef} id="navbar">
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
