@@ -2,7 +2,9 @@ import "./index.css"
 
 function Home(){
     return(
-        <div className="MainDisplay">This is the Home Page</div>
+        <div className="MainDisplay">
+            This is the Home Page
+        </div>
     )
 }
 

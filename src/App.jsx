@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import EllconLogo from './assets/Logo.png'
 import LPBD from './assets/LPBD.png'
 import Navbar from './Navbar'
@@ -11,17 +11,20 @@ import Loader from './Loader'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
+const tabs = ['Home', 'Services']
+
 function App() {
+  const [visible, setVisible] = useState(true);
+
   return (
     <>
     <img className='LPBD' src={LPBD}/>
-      <Loader/>
+    <Loader visible={visible} setVisible={setVisible}/>
       <div className='maindiv'>
         <div className="headline">
           <div className="headbg"></div>
           <img className='logoimg' src={EllconLogo}/>
           <Navbar/>
-          
         </div>
       </div>
       <Routes>

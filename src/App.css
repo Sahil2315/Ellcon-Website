@@ -20,6 +20,8 @@
   padding: 46px 30px;
   display: flex;
   flex-direction: row;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: 10;
 }
 
@@ -114,73 +116,6 @@
   opacity: 30%;
 }
 
-#cover{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 5;
-  background-color: white;
-  animation: fade1;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#marker{
-  z-index: 6;
-  position: absolute;
-  top: 45vh;
-  left: 48vw;
-  height: 75px;
-  animation: load1;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#logotext{
-  position: absolute;
-  height: 68px;
-  top: 19px;
-  left: calc(8vw + 48px);
-}
-
-@keyframes load1{
-  0%{
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  20%{
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-  30%{
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  40%{
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-  100%{
-    -webkit-transform: translate(-35vw, calc(15px - 45vh));
-    transform: translate(-35vw, calc(15px - 45vh));
-  }
-}
-
-@keyframes fade1{
-  80%{
-    opacity: 100%;
-  }
-  100%{
-    opacity: 0%;
-    display: none;
-  }
-}
 
 .MainDisplay{
   margin-top: 40vh;
@@ -227,8 +162,6 @@
     top: 70px;
     width: 100%;
     background-color: rgba(210, 105, 30, 0.11);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     height: 0px;
     overflow: hidden;
     transition: all 1s ease-in-out;
