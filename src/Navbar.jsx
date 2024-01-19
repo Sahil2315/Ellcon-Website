@@ -3,25 +3,20 @@ import "./index.css"
 import { useEffect, useRef } from 'react'
 
 let clickToggle = false
-function isTouch(){
-    const userAgent = navigator.userAgent;
-    return userAgent.indexOf('touch') !== -1;
-}
+
 function Navbar(){
   const location = useLocation()
   let navbarRef = useRef()
+  let navBtnRef = useRef()
 
+    let elseWhereClick = (event) => {
+        if(event.target != navbarRef.current && event.target != navBtnRef.current && clickToggle == true){
+            shutNav()
+        }
+    }
     useEffect(() => {
-        document.addEventListener('click touchstart', (event) => {
-            if(event.target !== navbarRef.current){
-                shutNav()
-            }
-        })
-        return () => document.removeEventListener('click touchstart', (event) => {
-                if(event.target !== navbarRef.current){
-                    shutNav()
-                }
-            })
+        document.addEventListener('click', elseWhereClick)
+        return () => document.removeEventListener('click', elseWhereClick)
     }, [])
     useEffect(() => {
         shutNav()
@@ -67,7 +62,7 @@ function Navbar(){
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink> 
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
             </div>
-            <div onTouchStart={ isTouch ? btnpress : null } onClick={ isTouch ? null : btnpress } id="navbtn">
+            <div ref={navBtnRef} onClick={ btnpress } id="navbtn">
                 <div id="nbline1"></div>
                 <div id="nbline2"></div>
                 <div id="nbline3"></div>
