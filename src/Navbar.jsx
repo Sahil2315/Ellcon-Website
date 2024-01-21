@@ -41,7 +41,7 @@ function Navbar(){
         else{
             line2.style.opacity = "0%"
             clickToggle = true
-            navbar.style.height = "330px"
+            navbar.style.height = "310px"
             line1.style.transform = "rotate(45deg) scaleX(1.21)"
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
         }        

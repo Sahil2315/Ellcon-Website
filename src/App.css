@@ -242,8 +242,6 @@
     width: 100%;
     background-color: rgba(210, 105, 30, 0.11);
     height: 0px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
     transition: all 1s ease-in-out;
   }
@@ -251,6 +249,8 @@
     padding: 20px 5px;
     width: calc(100% - 10px);
     text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   #navbtn{
     display: flex;
