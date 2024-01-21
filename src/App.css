@@ -20,8 +20,6 @@
   padding: 46px 30px;
   display: flex;
   flex-direction: row;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   z-index: 10;
 }
 
@@ -114,6 +112,7 @@
   position: absolute;
   bottom: 0;
   opacity: 30%;
+  background-size: cover;
 }
 
 
@@ -164,8 +163,8 @@
   animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  /* animation-direction: reverse;
-  -webkit-animation-direction: reverse; */
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
 }
 
 #logotext{
@@ -177,24 +176,24 @@
 
 @keyframes load1{
   0%{
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  20%{
-    -webkit-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
+    -webkit-transform: translate(-38vw, calc(15px - 45vh));
+    transform: translate(-38vw, calc(15px - 45vh));
   }
   30%{
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
-  40%{
-    -webkit-transform: rotateY(-360deg);
-    transform: rotateY(-360deg);
+  50%{
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  70%{
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   100%{
-    -webkit-transform: translate(-38vw, calc(15px - 45vh));
-    transform: translate(-38vw, calc(15px - 45vh));
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
 
@@ -243,6 +242,8 @@
     width: 100%;
     background-color: rgba(210, 105, 30, 0.11);
     height: 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
     transition: all 1s ease-in-out;
   }
