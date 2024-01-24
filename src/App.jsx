@@ -17,7 +17,7 @@ function App() {
   const [visible, setVisible] = useState(true);
   return (
     <>
-    <img className='LPBD' src={LPBD}/>
+    <div className='LPBD'/>
     <Loader visible={visible} setVisible={setVisible}/>
       <div className='maindiv'>
         <div className="headline">
