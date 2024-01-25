@@ -12,7 +12,7 @@
 }
 
 
-#navbar{
+.navbar{
   position: relative;
   float: right;
   right: 7%;
@@ -23,7 +23,7 @@
   z-index: 10;
 }
 
-#navbar a:hover{
+.navbar a:hover{
   color: rgb(68, 133, 187);
 }
 
@@ -36,6 +36,7 @@
 .active{
   color: rgb(68, 133, 187);
 }
+
 #navbtn{
   position: absolute;
   display: none;
@@ -361,7 +362,7 @@
   .headline{
     height: 70px;
   }
-  #navbar{
+  .navbar{
     right: 5%;
     font-size: 18px;
     padding: 30px 20px;   
@@ -384,16 +385,19 @@
 }
 
 @media screen and (max-width: 830px) {
-  #navbar{
+  .navbar{
     flex-direction: column;
     padding: 0;
     right: 0%;
     top: 70px;
     width: 100%;
-    background-color: rgba(210, 105, 30, 0.11);
     height: 0px;
     overflow: hidden;
     transition: all 1s ease-in-out;
+    background-color: rgba(255, 184, 152, 0.2);
+  }
+  .navbar-active{
+    height: 310px;
   }
   .navElements{
     padding: 20px 5px;

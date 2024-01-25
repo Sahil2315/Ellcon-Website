@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom"
 import "./index.css"
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 let clickToggle = false
 
@@ -8,6 +8,7 @@ function Navbar(){
   const location = useLocation()
   let navbarRef = useRef()
   let navBtnRef = useRef()
+  let [currNav, navChange] = useState('navbar')
 
     let elseWhereClick = (event) => {
         if(event.target != navbarRef.current && event.target != navBtnRef.current && clickToggle == true){
@@ -25,8 +26,6 @@ function Navbar(){
     let normalLinkStyling = "navElements"
     let activeLinkStyling = "navElements active"
     let btnpress = () => {
-        let navbar = document.getElementById("navbar")
-        let navbtn = document.getElementById("navbtn")
         let line1 = document.getElementById("nbline1")
         let line2 = document.getElementById("nbline2")
         let line3 = document.getElementById("nbline3")
@@ -34,14 +33,14 @@ function Navbar(){
         if(clickToggle){
             line2.style.opacity = "100%"
             clickToggle = false
-            navbar.style.height = "0px"
+            navChange('navbar')
             line1.style.transform = "rotate(0deg) scaleX(1)"
             line3.style.transform = "rotate(0deg) scaleX(1)"
         }
         else{
             line2.style.opacity = "0%"
             clickToggle = true
-            navbar.style.height = "310px"
+            navChange('navbar navbar-active')
             line1.style.transform = "rotate(45deg) scaleX(1.21)"
             line3.style.transform = "rotate(-45deg) scaleX(1.21)"
         }        
@@ -55,7 +54,7 @@ function Navbar(){
 
     return(
         <div>
-            <div ref = {navbarRef} id="navbar">
+            <div ref = {navbarRef} className={currNav}>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/">Home</NavLink>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/services">Services</NavLink>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
