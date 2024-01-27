@@ -107,9 +107,9 @@
 }
 
 .LPBD{
-  background-image: url('./assets/LPBD.png');
+  background-image: url('./assets/crane.png');
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
   z-index: 0;
   position: fixed;
   bottom: 0;

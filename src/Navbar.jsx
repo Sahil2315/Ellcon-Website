@@ -60,6 +60,7 @@ function Navbar(){
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/projects">Our Projects</NavLink>
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/aboutus">About Us</NavLink> 
                 <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/contact">Contact Us</NavLink>
+                <NavLink className={ ({isActive}) => isActive ? activeLinkStyling : normalLinkStyling } to="/ourteam">Our Team</NavLink>
             </div>
             <div ref={navBtnRef} onClick={ btnpress } id="navbtn">
                 <div id="nbline1"></div>
