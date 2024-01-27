@@ -9,6 +9,7 @@
   left: 0;
   width: 100%;
   height: 100px;
+  z-index: 8;
 }
 
 
@@ -20,7 +21,7 @@
   padding: 46px 30px;
   display: flex;
   flex-direction: row;
-  z-index: 10;
+  z-index: 8;
 }
 
 .navbar a:hover{
@@ -45,7 +46,7 @@
   height: 45px;
   top: 10px;
   right: 6px;
-  z-index: 10;
+  z-index: 8;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -118,13 +119,6 @@
 }
 
 
-.MainDisplay{
-  margin-top: 40vh;
-  margin-left: 10vw;
-  font-size: 30px;
-  font-weight: 600;
-  z-index: 4;
-}
 .navHeightVert{
   height: 330px;
 }
@@ -135,7 +129,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
   background-color: white;
   -webkit-animation: fade1;
   animation: fade1;
@@ -394,7 +388,7 @@
     height: 0px;
     overflow: hidden;
     transition: all 1s ease-in-out;
-    background-color: rgba(255, 184, 152, 0.2);
+    background-color: rgba(162, 212, 204, 0.473);
   }
   .navbar-active{
     height: 310px;
