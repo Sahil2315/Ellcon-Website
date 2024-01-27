@@ -2,7 +2,7 @@ import "./index.css"
 
 function Projects(){
     return(
-        <div className="MainDisplay">This is the Projects Page</div>
+        <div className="MainDisplay">Website Under Construction, We'll be right back.</div>
     )
 }
 
