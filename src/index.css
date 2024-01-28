@@ -58,12 +58,12 @@ button:focus-visible {
 
 .MainDisplay{
   position: relative;
-  margin-top: 110px;
-  min-height: calc(100vh - 110px);
+  margin-top: 90px;
+  height: calc(100vh - 100px);
+  padding-top: 10px;
   margin-left: 0;
   width: 100vw;
   backdrop-filter: hue-rotate(15deg) blur(4px);
-  font-size: 27px;
   font-weight: 600;
   background-color: rgba(100,180,180,0.1);
   z-index: 3;
@@ -75,10 +75,29 @@ button:focus-visible {
 .bigCont{
   position: relative;
   padding: 20px 70px;
-  width: 47vw;
+  width: 55vw;
   color: rgb(70, 70, 70);
   font-weight: 200;
-  line-height: 1.5;
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 37px;
+}
+
+.gradient-text1{
+  background:  linear-gradient(165deg, rgb(8, 131, 125) 0%, rgb(56, 53, 53) 50%, rgb(19, 179, 131) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 72px;
+  font-weight: 600;
+}
+
+.ellcon{
+  margin-right: 30px;
+}
+.lunawat-const{
+  margin-left: 30px;
 }
 
 .bigImg{
@@ -86,41 +105,23 @@ button:focus-visible {
   padding: 20px;
   width: 40vw;
   right: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sideimg{
   position: relative;
   width: 38vw;
   height: 38vw;
-  margin-left: 30px;
   border-radius: 7px;
   background-image: url('./assets/homepage1.jpg');
   background-size: cover;
   background-position: center;
-  animation-name: changing-image;
-  animation-duration: 40s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: forwards;
 }
 
-@keyframes changing-image {
-  0%{
-    background-image: url('./assets/homepage1.jpg');
-  }
-  20%{
-    background-image: url('./assets/homepage2.jpg');
-  }
-  40%{
-    background-image: url('./assets/homepage2.jpg');
-  }
-  60%{
-    background-image: url('./assets/homepage3.jpg');
-  }
-  80%{
-    background-image: url('./assets/homepage4.jpg');
-  }
-  100%{
-    background-image: url('./assets/homepage1.jpg');
+@media screen and (max-width: 1180px) {
+  .MainDisplay{
+    margin-top: 60px;
+    height: calc(100vh - 70px);
   }
 }

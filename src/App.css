@@ -352,7 +352,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1180px) {
   .headline{
     height: 70px;
   }
@@ -378,7 +378,7 @@
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 880px) {
   .navbar{
     flex-direction: column;
     padding: 0;
@@ -391,7 +391,7 @@
     background-color: rgba(162, 212, 204, 0.473);
   }
   .navbar-active{
-    height: 310px;
+    height: 380px;
   }
   .navElements{
     padding: 20px 5px;
