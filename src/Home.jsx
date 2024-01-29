@@ -6,8 +6,9 @@ function Home(){
         <div className="MainDisplay">
             <div className="bigCont">
                 <div>
-                    Started as <span className="gradient-text1 lunawat-const" >Lunawat Construction</span>, <br />
-                    <span className="gradient-text1 ellcon" >Ellcon Projects</span>is your gateway to a world where innovation, excellence, and strategic planning converge to redefine the landscape of infrastructure. 
+                    Welcome to <br />
+                    <span className="gradient-text1 ellcon" >Ellcon Projects</span>, <br />
+                     your gateway to a world where innovation, excellence, and strategic planning converge to redefine the landscape of infrastructure. 
                 </div>
             </div>
             <div className="bigImg">
