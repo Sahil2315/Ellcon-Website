@@ -93,10 +93,6 @@ button:focus-visible {
   font-weight: 600;
 }
 
-.ellcon{
-  margin-right: 30px;
-}
-
 .bigImg{
   position: relative;
   padding: 20px;
@@ -120,5 +116,13 @@ button:focus-visible {
   .MainDisplay{
     margin-top: 60px;
     height: calc(100vh - 70px);
+  }
+  .bigCont{
+    font-size: 25px;
+    line-height: 1.4;
+    padding: 15px 35px;
+  }
+  .gradient-text1{
+    font-size: 55px;
   }
 }

@@ -133,8 +133,8 @@
   background-color: white;
   -webkit-animation: fade1;
   animation: fade1;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
   -webkit-animation-iteration-count: 1;
@@ -154,8 +154,8 @@
 #loadsvg-plan{
   -webkit-animation: loadsvgp;
   animation: loadsvgp;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -167,8 +167,8 @@
 #loadsvg-expln{
   -webkit-animation: loadsvge;
   animation: loadsvge;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -180,8 +180,8 @@
 #loadsvg-const{
   -webkit-animation: loadsvgc;
   animation: loadsvgc;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -193,8 +193,8 @@
 #loadsvg-elect{
   -webkit-animation: loadsvgl;
   animation: loadsvgl;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
@@ -211,8 +211,8 @@
   height: 75px;
   -webkit-animation: load1;
   animation: load1;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
