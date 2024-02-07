@@ -98,9 +98,9 @@
 }
 .logoimg{
   position: absolute;
-  top: 15px;
-  left: 8%;
-  height: 75px;
+  top: 10px;
+  left: 7.1%;
+  height: 90px;
 }
 
 .maindiv{
@@ -203,12 +203,22 @@
   animation-fill-mode: backwards;
 }
 
-#marker{
-  z-index: 7;
+.marker{
   position: absolute;
+  top: calc(15px);
+  left: 8vw;
+  height: 75px;
+}
+.logotext{
+  position: absolute;
+  height: 68px;
+  top: 19px;
+  left: calc(8vw + 48px);
+}
+
+#marker{
   top: 45vh;
   left: 48vw;
-  height: 75px;
   -webkit-animation: load1;
   animation: load1;
   -webkit-animation-duration: 3s;
@@ -223,17 +233,11 @@
   -webkit-animation-direction: reverse;
 }
 
-#logotext{
-  position: absolute;
-  height: 68px;
-  top: 19px;
-  left: calc(8vw + 48px);
-}
 
 @keyframes load1{
   0%{
-    -webkit-transform: translate(-38vw, calc(15px - 45vh));
-    transform: translate(-38vw, calc(15px - 45vh));
+    -webkit-transform: translate(-40vw, calc(15px - 45vh));
+    transform: translate(-40vw, calc(15px - 45vh));
   }
   30%{
     -webkit-transform: rotateY(0deg);
@@ -365,13 +369,14 @@
     padding-left: 25px;
   }
   .logoimg{
-    height: 55px;
-    top: 10px;
+    height: 65px;
+    top: 6px;
+    left: 6.7%;
   }
-  #marker{
-    height: 55px;
+  .marker{
+    height: 50px;
   }
-  #logotext{
+  .logotext{
     top: 12px;
     height: 51px;    
     left: calc(8vw + 33px);

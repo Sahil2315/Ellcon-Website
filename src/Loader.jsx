@@ -16,8 +16,8 @@ function Loader({visible, setVisible}){
             <VectorC/>
             <VectorE/>
             <VectorL/>
-            <img id='marker' src={marker}/>
-            <img id='logotext' src={logotext}/>
+            <img className='marker' id='marker' src={marker}/>
+            <img className='logotext' src={logotext}/>
         </div>
     ) : <div/>
 }

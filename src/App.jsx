@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import EllconLogo from './assets/Logo.png'
-import LPBD from './assets/LPBD.png'
+import marker from './assets/marker.png'
+import logotext from './assets/logotext.png'
 import Navbar from './Navbar'
 import Home from './Home'
 import Services from './Services'
@@ -23,7 +23,8 @@ function App() {
       <div className='maindiv'>
         <div className="headline">
           <div className="headbg"></div>
-          <img className='logoimg' src={EllconLogo}/>
+          <img className='marker' src={marker}/>
+          <img className='logotext' src={logotext}/>
           <Navbar/>
         </div>
       </div>
