@@ -113,7 +113,7 @@
   height: 100vh;
   z-index: 0;
   position: fixed;
-  bottom: 0;
+  top: 0;
   opacity: 30%;
   background-size: cover;
 }
@@ -393,10 +393,10 @@
     height: 0px;
     overflow: hidden;
     transition: all 1s ease-in-out;
-    background-color: rgba(162, 212, 204, 0.473);
+    background-color: rgba(210, 230, 255, 0.464);
   }
   .navbar-active{
-    height: 380px;
+    height: 370px;
   }
   .navElements{
     padding: 20px 5px;

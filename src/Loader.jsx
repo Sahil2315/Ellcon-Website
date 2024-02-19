@@ -8,7 +8,7 @@ function Loader({visible, setVisible}){
     useEffect(() => {
         setTimeout(() => {
         setVisible(false);
-        }, 4000);
+        }, 3800);
     }, []);
     return visible ? (
         <div id="cover">
