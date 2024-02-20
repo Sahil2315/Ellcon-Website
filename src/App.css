@@ -10,6 +10,7 @@
   width: 100%;
   height: 100px;
   z-index: 8;
+  box-shadow: 1px 1px 17px rgba(0, 0, 0, 0.144);
 }
 
 
@@ -393,7 +394,7 @@
     height: 0px;
     overflow: hidden;
     transition: all 1s ease-in-out;
-    background-color: rgba(210, 230, 255, 0.464);
+    background-color: rgba(255, 252, 237, 0.432);
   }
   .navbar-active{
     height: 370px;
@@ -402,7 +403,7 @@
     padding: 20px 5px;
     width: calc(100% - 10px);
     text-align: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(10px);
   }
   #navbtn{

@@ -8,7 +8,6 @@ import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
 import Loader from './Loader'
-import OurTeam from './OurTeam'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
@@ -34,7 +33,6 @@ function App() {
         <Route path='/projects' element = {<Projects/>}/>
         <Route path='/aboutus' element = {<About/>}/>
         <Route path='/contact' element = {<Contact/>}/>
-        <Route path='/ourteam' element = {<OurTeam/>}/>
       </Routes>
     </>
   )
