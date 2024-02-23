@@ -170,6 +170,9 @@ button:focus-visible {
   .gradient-text1{
     font-size: 55px;
   }
+  .head1{
+    font-size: 40px;
+  }
   .heading2{
     margin-left: 20px;
     font-size: 30px;
@@ -239,6 +242,37 @@ button:focus-visible {
     align-items: center;
     flex-direction: column;
     height: calc(100vh - 150px);
+    
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .bigCont{
+    font-size: 18px;
+    line-height: 1.2;
+    width: 78vw;
+    margin-bottom: 0px;
+  }
+  .bigImg{
+    width: 90vw;
+    height: 80vw;
+    right: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .sideimg{
+    width: 80vw;
+    height: 80vw;
+
+  }
+  .gradient-text1{
+    font-size: 30px;
+  }
+  .MainDisplay{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 100px);
     
   }
 }
