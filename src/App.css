@@ -241,12 +241,16 @@
     transform: translate(-40vw, calc(15px - 45vh));
   }
   30%{
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.5);
   }
   50%{
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.5);
   }
   70%{
     -webkit-transform: rotateY(0deg);
